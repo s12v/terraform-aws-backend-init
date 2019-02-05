@@ -6,6 +6,7 @@ Create a Terraform S3 backend with Terraform
 
 ```
 git clone https://github.com/s12v/terraform-aws-backend-init.git
+cd terraform-aws-backend-init
 terraform init
 terraform apply
 ```
