@@ -4,7 +4,7 @@ variable terraform_state_name {
 }
 
 variable noncurrent_version_expiration {
-  type = "number"
+  type = "string"
   description = "Days to expire non-current state versions"
   default = 30
 }
