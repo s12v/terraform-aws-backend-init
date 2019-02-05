@@ -13,7 +13,7 @@ resource "aws_s3_bucket" "terraform_state" {
       expired_object_delete_marker = true
     }
     noncurrent_version_expiration {
-      days = ${var.noncurrent_version_expiration}
+      days = "${var.noncurrent_version_expiration}"
     }
   }
 
