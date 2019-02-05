@@ -1,6 +1,9 @@
 # terraform-aws-backend-init
 
-Create a Terraform S3 backend with Terraform
+Creats the following resources for Terraform S3 backend:
+
+ - S3 bucket - Used to store Terraform state. Encrypted and versioned. Non-current versions expire after 30 days.
+ - DynamoDB table - Used for Terraform state locking and consistency checking. Uses `PAY_PER_REQUEST` billing. Encrypted.
 
 ## Usage:
 
@@ -37,8 +40,3 @@ terraform {
   }
 }
 ```
-
-## Resources
-
- - S3 bucket - Used to store Terraform state. Encrypted and versioned. Non-current versions expire after 30 days.
- - DynamoDB table - Used for Terraform state locking and consistency checking. Uses `PAY_PER_REQUEST` billing. Encrypted.
